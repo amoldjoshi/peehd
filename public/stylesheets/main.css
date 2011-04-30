@@ -1,0 +1,225 @@
+/*This file is designed by Amol Joshi on April 12, 2011.*/
+body {
+	background-image:url(../images/Back.png);
+	color: #000000;
+	font-family: Arial, Helvetica, sans-serif, Verdana;
+	font-size: 12px;
+	margin: 0px;
+	padding: 0px;
+}
+/********************** Header ***************************/
+#header {
+	margin: 0px 0px 0px 0px;
+	/*background-image:url(../images/Header.png);*/
+	background: none;
+	background-repeat:no-repeat;
+	width:500px;
+	height:262px;
+}
+
+.container {
+  width: 1000px;
+}
+/********************** Navigation Bar ***************************/
+#nav {
+  /*color: solid white;*/
+  text-align:right;
+  font-size: 10pt;
+  font-weight: bold;
+  /*background: #ccc;*/
+  padding: 0.5em;
+}
+
+#nav a, #nav a:visited  {
+  color: maroon;
+  text-decoration: none;
+}
+
+#nav a:hover {
+  border-bottom: 2px dotted maroon;
+}
+#menu {
+	position:relative;
+	background-image:url(../images/menu.jpg);
+	background-repeat:no-repeat;
+	width:1000px;
+	height:117px;
+}
+#menu ul{
+	position:absolute;
+	top:30px;
+	left:265px;
+}
+#menu li{
+	float:left;
+	display:inline;
+	padding: 0px 0px 0px 10px;
+}
+#menu a{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bolder;
+	text-transform: uppercase;
+	color: #d8cd8d;
+	text-decoration: none;
+}
+#menu a:hover{
+	color:#3e3c27;
+}
+h1,h2,h3 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;/*Changed from 18 to 10*/
+	font-weight: bolder;
+	text-transform: uppercase;
+	color: #171508;
+}
+h1,h2 {
+	position:absolute;
+	top:30px;/*Changed from 94 to 15*/
+}
+h1 {
+	left:241px;
+}
+h2 {
+	right:75px;
+}
+h3 {
+	margin: 15px 0px 0px 30px;
+	border-bottom: solid 1px #625d3b;
+}
+/********************** Main ***************************/
+#main {
+	background-image:url(../images/Back.png);
+	background-repeat: repeat-y;
+	display:block;
+	width:1000px;
+	height:auto;
+}
+#content {
+	background-image:url(../images/Back.png);
+	background-repeat: repeat-y;
+	width:950px;
+}
+/********************** Left - Text ***************************/
+#left {
+	float:left;
+	width:490px;
+}
+#left p{
+	padding: 5px 10px 10px 30px;
+}
+#left a:hover{color:#d8cd8d;}
+
+/********************** Right - Team ***************************/
+#right {
+	float:right;
+	width:230px;
+}
+.member {
+	display:inline;
+	float:left;
+	margin-left:10px;
+}
+.member a{
+	font-size: 12px;
+	font-weight: bold;
+	color: #f5f1d1;
+	text-decoration: none;
+}
+.member img{
+	border: none 0px;
+}
+.member span{
+	display:block;
+	text-align:center;
+	padding: 2px 0px 13px 0px;
+	text-transform: uppercase;
+
+}
+.member span a{}
+.member span a:hover{}
+
+/********************** Footer ***************************/
+#footer {
+	/*background-image:url(../images/Footer.png);*/
+	background: white;
+	background-repeat:no-repeat;
+	width:1000px;
+	height:20px;
+	text-align:center;
+	float:left;
+	clear:both;
+}
+#footer ul{
+
+}
+#footer li{
+	display:inline;
+	float:none;
+	text-align:center;
+	padding: 0px 10px 0px 10px;
+	border-right: solid 1px #908a68;
+}
+.lastchild{
+	border-right: 0px none !important;
+}
+#footer a{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	text-transform:uppercase;
+	color: #908a68;
+	text-decoration: none;
+}
+#footer a:hover{text-decoration: underline;}
+#footer span{
+	font-size: 9px;
+	font-weight: bold;
+	color: #18160e;
+	margin:10px;
+	display:block;
+}
+/*********************Error Messages***********************/
+#notice {
+  color: green;
+}
+
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  margin-bottom: 0px;
+  background-color: #c00;
+  color: #fff;
+}
+
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+/*********************THE END***********************/
+ul.users {
+  margin-top: 1em;
+}
+
+.users li {
+  list-style: none;
+}
+/*********************Above code **********************/

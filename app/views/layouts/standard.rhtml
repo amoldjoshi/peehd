@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!--The detailed standard was copied in Desnktop Ruby on Rails Book Listings-->
+  <title>peeHD, Your daily briefing!| <%= @title %></title>
+  <%= stylesheet_link_tag 'main'%>
+  <%= stylesheet_link_tag :all %>
+  <%= javascript_include_tag :defaults %>
+  <%= csrf_meta_tag %>
+    
+    <%= stylesheet_link_tag 'blueprint/screen', :media => 'screen' %>
+    <%= stylesheet_link_tag 'blueprint/print',  :media => 'print' %>
+   	<!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+    <!--[if lt IE 8]><%= stylesheet_link_tag 'blueprint/ie' %><![endif]-->
+    
+</head>
+<body>
+	<div class="container showgrid">
+		<div id= "header"><!--Start header.-->
+			<div id="nav">
+			<div class = "span-24">
+				<div class = "span-5 append-9">
+					<%= image_tag("Tempo.png", :alt => "peeHD", :class => "round") %>
+				</div><!--End Span-5.-->
+				<div class = "span-10 last">
+					<ul>
+					<%= link_to_unless_current "Home",     root_path %> |
+			        <%= link_to_unless_current "About",	   about_path %> |
+			        <%= link_to_unless_current "Contact",  contact_path %>|
+			        <% if signed_in? %>
+			        	<%= link_to "Users", users_path %>|
+      					<%= link_to "Sign out", signout_path, :method => :delete %>|
+      					<%= link_to "Profile", current_user %>|
+      					<%= link_to "Settings", edit_user_path(current_user) %>
+     				<% else %>
+     					<%= link_to "Sign in", signin_path %>
+      				<% end %>
+					
+		       		</ul>
+				</div><!--End Span-10.-->			
+		        </div><!--End span-24.-->
+        	</div><!--End nav.-->
+        	
+		</div><!--End header.-->
+		<div class = "span-22 box">
+        	<%= yield %>
+        </div><!--End span-22 box.-->
+
+	<div id= "footer"><!--Start header.-->
+			<div class = "span-22">
+				<%= link_to_unless_current "Home",     root_path %> |
+		        <%= link_to_unless_current "About",	   about_path %> |
+		        <%= link_to_unless_current "Contact",  contact_path %>
+       		 </div><!--End of Spand-22-->
+	</div><!--End Feader.-->
+</div><!--End container.-->
+</body>
+</html>
