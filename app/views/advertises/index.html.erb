@@ -3,7 +3,7 @@
 <table>
   <tr>
     <th>Name</th>
-    <th></th>
+    <th>Dashboard</th>
     <th></th>
     <th></th>
   </tr>
@@ -11,6 +11,7 @@
 <% @advertises.each do |advertise| %>
   <tr>
     <td><%= advertise.name %></td>
+    <td><%= advertise.dashboard_id %></td>
     <td><%= link_to 'Show', advertise %></td>
     <td><%= link_to 'Edit', edit_advertise_path(advertise) %></td>
     <td><%= link_to 'Destroy', advertise, :confirm => 'Are you sure?', :method => :delete %></td>

@@ -3,6 +3,7 @@ class AdvertisesController < ApplicationController
   # GET /advertises.xml
   def index
     @advertises = Advertise.all
+    @title = "All Advertises"
 
     respond_to do |format|
       format.html # index.html.erb
