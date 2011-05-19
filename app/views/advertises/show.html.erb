@@ -5,10 +5,16 @@
   <%= @advertise.name %>
 </p>
 <p>
-  <b>Dashboard:</b>
+  <b>Dashboard belongs to:</b>
   <%= @advertise.dashboard_id %>
 </p>
-
-
+<p>
+  <b>URL for this add:</b>
+  <%= @advertise.url %>
+</p>
+<p>
+  <b>Price for Product:</b>
+  <%= @advertise.price %>
+</p>
 <%= link_to 'Edit', edit_advertise_path(@advertise) %> |
 <%= link_to 'Back', advertises_path %>

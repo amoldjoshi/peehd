@@ -1,7 +1,7 @@
 PeehD::Application.routes.draw do
 
  
-
+  root :controller => 'Dashboards', :action => :index 
   get "sessions/new"
   resources :users
   resources :sessions, :only => [:new, :create, :destroy]
@@ -22,7 +22,7 @@ PeehD::Application.routes.draw do
 
   root :to => 'pages#home'
   
-  get "pages/home"
+  #get "pages/home"
   
 
   resources :advertises

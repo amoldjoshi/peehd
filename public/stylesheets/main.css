@@ -1,6 +1,6 @@
 /*This file is designed by Amol Joshi on April 12, 2011.*/
 body {
-	background-image:url(../images/Back.png);
+	background-image:url(../images/Back3.png);
 	color: #000000;
 	font-family: Arial, Helvetica, sans-serif, Verdana;
 	font-size: 12px;
@@ -10,21 +10,18 @@ body {
 /********************** Header ***************************/
 #header {
 	margin: 0px 0px 0px 0px;
-	/*background-image:url(../images/Header.png);*/
+	background-image:url(../images/Header.png);
 	background: none;
 	background-repeat:no-repeat;
 	width:500px;
 	height:100px;
 }
 
-.container {
-  width: 1000px;
-}
 /********************** Navigation Bar ***************************/
 #nav {
   /*color: solid white;*/
   text-align:right;
-  font-size: 10pt;
+  font-size: 12pt;
   font-weight: bold;
   /*background: #ccc;*/
   padding: 0.5em;
@@ -165,7 +162,7 @@ h3 {
 }
 #footer a{
 	font-family: Arial, Helvetica, sans-serif;
-	font-size: 11px;
+	font-size: 12px;
 	font-weight: bold;
 	text-transform:uppercase;
 	color: #908a68;

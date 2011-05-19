@@ -10,13 +10,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110507155847) do
+ActiveRecord::Schema.define(:version => 20110508164712) do
 
   create_table "advertises", :force => true do |t|
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "dashboard_id"
+    t.string   "url"
+    t.float    "price"
   end
 
   create_table "dashboards", :force => true do |t|

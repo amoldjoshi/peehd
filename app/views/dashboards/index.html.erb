@@ -1,23 +1,41 @@
 <h1>Listing dashboards</h1>
+ 
+ <div class= "column span-24">
+	
+ 	<div class = "column span-10 append-2 colborder box">
+		<table border="3" cellspacing="0" cellpadding="0">
+ 		<th><h5>Electronics</h5></th>
+		
+			<tr>
+				<%Dashboard.find(2).advertises.each do |advertise|%>
+				
+					<dl>
+						<dt><%= advertise.name %></dt>
+						<dt><%= advertise.url %></dt>
+						<dt><%= number_to_currency(advertise.price) %></dt>
+					</dl>
+				<% end %>
+			</tr>
+		</table>
+	</div>
+	
+	<div class = "column span-10 last colborder box">
+		<table border="3" cellspacing="0" cellpadding="0">
+		<th><h5>Cosmetics</h5></th>
+			
+				<tr>
+					<%Dashboard.find(3).advertises.each do |advertise|%>
+					<dl>
+						<dt><%= advertise.name %></dt>
+						<dt><%= advertise.url %></dt>
+						<dt><%= number_to_currency(advertise.price) %></dt>
+					</dl>
+					<% end %>
+					
+				</tr>
+			</table> 
+	</div>
+	
+</div>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
 
-<% @dashboards.each do |dashboard| %>
-  <tr>
-    <td><%= dashboard.name %></td>
-    <td><%= link_to 'Show', dashboard %></td>
-    <td><%= link_to 'Edit', edit_dashboard_path(dashboard) %></td>
-    <td><%= link_to 'Destroy', dashboard, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
-</table>
-
-<br />
-
-<%= link_to 'New Dashboard', new_dashboard_path %>

@@ -3,6 +3,7 @@ class DashboardsController < ApplicationController
   # GET /dashboards.xml
   def index
     @dashboards = Dashboard.all
+    @advertises = Advertise.all
 
     respond_to do |format|
       format.html # index.html.erb
@@ -14,6 +15,8 @@ class DashboardsController < ApplicationController
   # GET /dashboards/1.xml
   def show
     @dashboard = Dashboard.find(params[:id])
+    @advertises = @dashboard.advertises
+
 
     respond_to do |format|
       format.html # show.html.erb
@@ -80,4 +83,9 @@ class DashboardsController < ApplicationController
       format.xml  { head :ok }
     end
   end
-end
+  
+  def find_dashboard(n)
+  	dashboard = dashboard.n
+  end
+ end
+ 

@@ -1,17 +1,21 @@
 <h1>Listing advertises</h1>
 
+
 <table>
   <tr>
     <th>Name</th>
     <th>Dashboard</th>
-    <th></th>
-    <th></th>
+    <th>url</th>
+    <th>Price</th>
   </tr>
 
 <% @advertises.each do |advertise| %>
+	
   <tr>
     <td><%= advertise.name %></td>
     <td><%= advertise.dashboard_id %></td>
+    <td><%= advertise.url %></td>
+    <td><%= advertise.price %></td>
     <td><%= link_to 'Show', advertise %></td>
     <td><%= link_to 'Edit', edit_advertise_path(advertise) %></td>
     <td><%= link_to 'Destroy', advertise, :confirm => 'Are you sure?', :method => :delete %></td>
