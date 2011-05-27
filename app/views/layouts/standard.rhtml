@@ -23,9 +23,10 @@
 		<div id= "header"><!--Start header.-->
 			<div id="nav">
 			<div class = "span-24">
-				<div class = "span-5 append-9">
+				<div class = "span-5 append-7">
 					<%= image_tag("Tempo.png", :alt => "peeHD.com", :class => "round") %>
 				</div><!--End Span-5.-->
+				
 				<div class = "span-10 last">
 					<ul>
 					<%= link_to_unless_current "Home",     root_path %> |
@@ -39,13 +40,12 @@
      				<% else %>
      					<%= link_to "Sign in", signin_path %>
       				<% end %>
-					
-		       		</ul>
+					</ul>
 				</div><!--End Span-10.-->			
-		        </div><!--End span-24.-->
-        	</div><!--End nav.-->
-        	
+		        </div><!--End nav.-->
+			</div><!--End span-24.-->	
 		</div><!--End header.-->
+		
 		<div class = "span-24">
         	<%= yield %>
         </div><!--End span-24 box.-->

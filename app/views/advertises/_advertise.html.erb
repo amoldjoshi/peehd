@@ -1,0 +1,11 @@
+<!--Show all Dashboard 1 advertises-->
+<% @advertises.each do |advertise| %>
+  <table border = "1">
+  	<dl>
+      <dd><%= advertise.name %></dd>
+	  <dd><%= advertise.dashboard_id %></dd>
+	  <dd><%= advertise.url %></dd>
+	  <dd><%= advertise.price %></dd>
+	</dl>
+  </table>
+<% end %>

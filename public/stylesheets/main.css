@@ -2,7 +2,7 @@
 body {
 	background-image:url(../images/Back3.png);
 	color: #000000;
-	font-family: Arial, Helvetica, sans-serif, Verdana;
+	font-family: sans-serif, Arial, Helvetica,  Verdana;
 	font-size: 12px;
 	margin: 0px;
 	padding: 0px;
@@ -11,7 +11,7 @@ body {
 #header {
 	margin: 0px 0px 0px 0px;
 	background-image:url(../images/Header.png);
-	background: none;
+	/*background-color: #aaaaaa;*/
 	background-repeat:no-repeat;
 	width:500px;
 	height:100px;
@@ -53,7 +53,7 @@ body {
 	padding: 0px 0px 0px 10px;
 }
 #menu a{
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: sans-serif, Arial, Helvetica ;
 	font-size: 14px;
 	font-weight: bolder;
 	text-transform: uppercase;
@@ -64,13 +64,13 @@ body {
 	color:#3e3c27;
 }
 h1,h2,h3 {
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 10px;/*Changed from 18 to 10*/
+	font-family: sans-serif, Arial, Helvetica ;
 	font-weight: bolder;
 	text-transform: uppercase;
 	color: #171508;
 }
 h1,h2 {
+	font-size: 18px;/*Changed from 18 to 10*/
 	position:absolute;
 	top:30px;/*Changed from 94 to 15*/
 }
@@ -81,7 +81,8 @@ h2 {
 	right:75px;
 }
 h3 {
-	margin: 15px 0px 0px 30px;
+	font-size: 18px;/*Changed from 18 to 10*/
+	margin: 0px 0px 0px 30px;
 	border-bottom: solid 1px #625d3b;
 }
 /********************** Main ***************************/
@@ -161,7 +162,7 @@ h3 {
 	border-right: 0px none !important;
 }
 #footer a{
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: sans-serif, Arial, Helvetica ;
 	font-size: 12px;
 	font-weight: bold;
 	text-transform:uppercase;
@@ -220,3 +221,5 @@ ul.users {
   list-style: none;
 }
 /*********************Above code **********************/
+.rowA {background-color: #FFFFFF; }
+.rowB {background-color: #aaaaaa; }
