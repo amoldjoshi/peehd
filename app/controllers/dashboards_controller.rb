@@ -1,7 +1,10 @@
 class DashboardsController < ApplicationController
   # GET /dashboards
   # GET /dashboards.xml
-  def index
+ 
+   before_filter :login_as_admim_required, :only => [:new, :edit, :create, :update, :destroy ]
+     
+   def index
     @dashboards = Dashboard.all
     @advertises = Advertise.all
 
@@ -88,4 +91,3 @@ class DashboardsController < ApplicationController
   	dashboard = dashboard.n
   end
  end
- 

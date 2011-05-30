@@ -37,9 +37,12 @@
       					<%= link_to "Sign out", signout_path, :method => :delete %>|
       					<%= link_to "Profile", current_user %>|
       					<%= link_to "Settings", edit_user_path(current_user) %>
-     				<% else %>
-     					<%= link_to "Sign in", signin_path %>
-      				<% end %>
+      					<% if current_user.admin? %>
+  | 						<%= link_to "Press", advertises_path, :method => :edit %>
+  						<% end %>
+     				    <% else %>
+     					    <%= link_to "Sign in", signin_path %>
+      				    <% end %>
 					</ul>
 				</div><!--End Span-10.-->			
 		        </div><!--End nav.-->
@@ -55,6 +58,8 @@
 				<%= link_to_unless_current "Home",     root_path %> |
 		        <%= link_to_unless_current "About",	   about_path %> |
 		        <%= link_to_unless_current "Contact",  contact_path %>
+		        
+
        		 </div><!--End of Spand-22-->
 	</div><!--End Feader.-->
 </div><!--End container.-->

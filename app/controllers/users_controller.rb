@@ -107,7 +107,7 @@ class UsersController < ApplicationController
     end
   end
   
-    private
+private
 
     def authenticate
       deny_access unless signed_in?
@@ -121,6 +121,4 @@ class UsersController < ApplicationController
     def admin_user
       redirect_to(root_path) unless current_user.admin?
     end
-
-
 end

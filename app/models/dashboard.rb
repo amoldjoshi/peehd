@@ -1,5 +1,7 @@
 class Dashboard < ActiveRecord::Base
-   has_many :advertises
+   
+	has_many :advertises
+   
    
 
 
