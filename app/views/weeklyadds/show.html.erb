@@ -1,0 +1,18 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @weeklyadd.name %>
+</p>
+<p>
+  <b>Category_id:</b>
+  <%= @weeklyadd.category_id %>
+</p>
+<p>
+  <b>Url:</b>
+  <%= @weeklyadd.url %>
+</p>
+
+
+<%= link_to 'Edit', edit_weeklyadd_path(@weeklyadd) %> |
+<%= link_to 'Back', weeklyadds_path %>

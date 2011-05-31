@@ -1,28 +1,28 @@
-<h1>Listing advertises</h1>
-
-
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Dashboard</th>
-    <th>url</th>
-    <th>Price</th>
-  </tr>
-
-<% @advertises.each do |advertise| %>
+<!--<h1>Listing advertises</h1>-->
+<div class= "column span-24">
 	
-  <tr>
-    <td><%= advertise.name %></td>
-    <td><%= advertise.dashboard_id %></td>
-    <td><%= advertise.url %></td>
-    <td><%= advertise.price %></td>
-    <td><%= link_to 'Show', advertise %></td>
-    <td><%= link_to 'Edit', edit_advertise_path(advertise) %></td>
-    <td><%= link_to 'Destroy', advertise, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
-</table>
-
-<br />
-
-<%= link_to 'New Advertise', new_advertise_path %>
+ 	<div class = "column span-10 append-2 box">
+		<table>
+ 		<th><h3>All Weekly Adds Links</h3></th>
+ 		    <col style="width:380px" />    
+ 		    <col style="width:5px" />
+ 		    <col style="width:5px" />
+		<%@advertises.each do |advertise| %>
+			<tr class= "<%= cycle("rowA", "rowB")%>">
+				<td><%= advertise.name %></td>  
+				<td><%= advertise.dashboard_id %></td>
+				<td><%=link_to(image_tag("ButtonLetsgo.png", :size => "45x20", :border => 0), url_with_protocol(advertise.url),:target => :blank)%></td>
+				<td><%= link_to 'Show', advertise %></td>
+    			<td><%= link_to 'Edit', edit_advertise_path(advertise) %></td>
+    			<td><%= link_to 'Destroy', advertise, :confirm => 'Are you sure?', :method => :delete %></td>
+			</tr>
+		<% end %>
+		</table>
+	</div>
+	
+	<div class = "column span-10 last box">
+		<h3>Home of future avertisements.</h3>
+	</div>
+</div>
+	<br />
+<%= link_to 'New Weeklyadd', new_weeklyadd_path %>

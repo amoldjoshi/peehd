@@ -2,7 +2,7 @@ class DashboardsController < ApplicationController
   # GET /dashboards
   # GET /dashboards.xml
  
-   before_filter :login_as_admim_required, :only => [:new, :edit, :create, :update, :destroy ]
+   #before_filter :login_as_admim_required, :only => [:new, :edit, :create, :update, :destroy ]
      
    def index
     @dashboards = Dashboard.all

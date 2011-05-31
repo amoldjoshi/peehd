@@ -11,14 +11,18 @@ class ApplicationController < ActionController::Base
   def login_as_admim_required
     if session[:user]
     	@user = session[:user]
-    	if @user.admin == true
+    	if @user.admin?
             return true
-        end
+        else
+    	    flash[:warning]='You do not have enough permissions.'
+    	    return false
+    	end
+	else
+		redirect_to signin_path, :notice => "Please use maintenance login."
     end
     #flash[:warning]='Please use maintenance login.'
     #session[:return_to]=request.request_uri
-    redirect_to signin_path, :notice => "Please use maintenance login."
-    return false 
+    #redirect_to signin_path, :notice => "Please use maintenance login."
   end
 
 

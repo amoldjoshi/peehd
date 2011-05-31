@@ -1,6 +1,8 @@
 PeehD::Application.routes.draw do
 
  
+  resources :weeklyadds
+
   root :controller => 'Dashboards', :action => :index 
   get "sessions/new"
   resources :users

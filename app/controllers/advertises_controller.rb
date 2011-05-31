@@ -2,7 +2,7 @@ class AdvertisesController < ApplicationController
   # GET /advertises
   # GET /advertises.xml
   
-  before_filter :login_as_admim_required, :only => [:new, :edit, :create, :update, :destroy ]
+  #before_filter :login_as_admim_required, :only => [:new, :edit, :create, :update, :destroy ]
   
   def index
     @advertises = Advertise.all
